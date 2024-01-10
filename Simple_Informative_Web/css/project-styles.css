@@ -1,0 +1,176 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style-type: none;
+	text-decoration: none;
+	scroll-behavior: smooth;
+	scroll-padding-top: 53px;
+	overflow: auto;
+}
+
+body {
+	font-family: 'Quicksand', sans-serif;
+}
+
+.big-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 200px;
+	padding-inline: 2%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/earth.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+.big-header > h1 {
+	color: #fff;
+	font-family: 'Courier New', Courier, monospace, Geneva, Verdana, sans-serif;
+	letter-spacing: 0.5rem;
+	font-size: 50px;
+	font-weight: 900;
+}
+
+.big-header > p {
+	color: #fff;
+	text-align: center;
+	font-weight: 700;
+}
+
+.navbar {
+	background-color: rgba(0, 179, 255, 0.9);
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	padding: 0.9rem 1rem;
+	font-size: 15px;
+}
+
+.navbar ul {
+	display: flex;
+	gap: 30px;
+	align-items: center;
+	font-weight: 700;
+}
+
+.navbar ul li::after {
+	content: '';
+	border-bottom: 2px solid #fff;
+	display: block;
+	transform: scaleX(0);
+	padding-bottom: 2px;
+	transition: all .3s ease-in-out;
+	transform-origin: left;
+}
+
+.navbar ul li:hover::after {
+	transform: scaleX(1);
+}
+
+.navbar ul li a{
+	color: #fff;
+}
+
+#content {
+	padding: 20px;
+	float: left;
+	width: 75%;
+}
+
+#content > .card {
+	box-shadow: 0 0 7px 0 #000;
+	border-radius: 5px;
+	margin-bottom: 50px;
+	padding: 10px;
+}
+
+#content > .card > .featured-image {
+	width: 100%;
+	margin-top: 10px;
+	border-radius: 5px;
+}
+
+aside {
+	float: right;
+	width: 25%;
+	padding: 20px;
+}
+
+.figureimage {
+	box-shadow: 0 0 7px 0 #000;
+	border-radius: 5px;
+	margin-bottom: 50px;
+	padding: 10px;
+}
+
+.figureimage header {
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.figureimage header img {
+	width: 60px;
+	animation: rotate 5s linear infinite;
+}
+
+.figureimage section tr th {
+	text-align: left;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	font-weight: 600;
+	font-size: 13px;
+}
+
+.figureimage section tr td {
+	text-align: left;
+	padding-bottom: 10px;
+	font-size: 13px;
+}
+
+footer {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/earth.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	padding: 50px;
+	text-align: center;
+	font-weight: 800;
+	color: #fff;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+/* Media Query */
+@media screen and (max-width: 900px) {
+	main {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#content, aside {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#content {
+		font-size: 13px;
+	}
+
+	.navbar ul {
+		flex-direction: column;
+		gap: 0;
+		text-align: start;
+	}
+}
