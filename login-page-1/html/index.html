@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'/>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+	<title>Login Page</title>
+	<link rel="stylesheet" href="../css/styles.css"/>
+</head>
+<body>
+	<div class='container'>
+		<form action='#' method='post' id="userForm" autocomplete="false">
+			<h1>Login</h1>
+				<div class='input-box user'>
+					<input type='text' id="username" name="Name" required maxlength="30"/>
+					<label for="username" class='floating-label'>Username</label>
+					<img src="../src/user-solid.svg">
+
+					<label id="maxcharacter">
+						Your Characters: <span id="characters"></span>
+					</label>
+				</div>	
+				
+				<div class='input-box password'>
+					<input type='password' id="pass" required/>
+					<label for="pass" class='floating-label'>Password</label>		
+					<img src="../src/eye-slash-solid.svg" id="eyeicon">
+				</div>
+				
+				<div class='remember-forgot'>
+					<div class='remember-me'>
+						<input type='checkbox' name="remember-pass" id="remember">
+						<label for="remember">Remember Me</label>
+					</div>
+						
+					<a href='#'> Forgot Password?</a>
+				</div>
+					
+				<div class="captcha-box" >
+					<img src="../src/avoid-captcha.jpg">
+					<input type="text" name="captcha" id="captcha-input" placeholder="Solve captcha..." required>
+				</div>
+
+				<div class='btn'>
+					<input type='submit' value='Login' id="button" disabled>
+				</div>
+						
+				<div class='register-link'>
+					Don't have an account? <a href='#'> Register Here</a>
+				</div>
+		</form>
+	</div>	
+	<script src='../js/script.js'></script>
+</body>
+</html>
+

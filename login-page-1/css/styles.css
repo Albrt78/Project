@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Calibri;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("../src/84826-nature-simple_background-sea.jpg") center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+}
+
+.container {
+    margin: auto auto;
+    border: 1px solid white;
+    width: 350px;
+    border-radius: 10px;
+    padding: 1rem;
+    background: transparent;
+    backdrop-filter: blur(150px);
+}
+
+form {
+    margin: 1rem 1px;
+    color: white;
+}
+
+form h1 {
+    text-align: center;
+}
+
+.input-box {
+    width: 100%;
+    height: 2.25rem;
+    margin: 1rem 0 0 0;
+    position: relative;
+}
+
+.input-box.password {
+    margin-top: 30px;
+}
+
+.input-box img {
+    position: absolute;
+    right: 0.9rem;
+    top: 0.65rem;
+}
+
+.input-box input {
+    padding: 0 1rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: transparent;
+    border: 0.5px solid white;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.floating-label {
+    font-size: 16px;
+    position: absolute;
+    top: 8px;
+    left: 0.7rem;
+    color: black;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.input-box input:focus~.floating-label,
+.input-box input:valid~.floating-label {
+    transform: translateY(-18px);
+    font-size: 14px;
+    background-color: white;
+    border-radius: 10px;
+    padding-inline: 5px;
+    color: rgb(175, 113, 255);
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 0.5rem 0;
+}
+
+.remember-me {
+    display: flex;
+    gap: 5px;
+}
+
+.remember-me input {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: lime;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn input {
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    padding: 5px 0;
+    background-color: transparent;
+    border: 0.5px solid white;
+    color: white;
+    font-weight: bold;
+}
+
+.btn input:hover {
+    background-color: white;
+    color: purple;
+}
+
+.register-link {
+    margin: 0.5rem 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+#maxcharacter {
+    visibility: hidden;
+}
+
+.captcha-box {
+    margin: 20px;
+}
+
+.captcha-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.captcha-box input {
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+    padding: 1rem;
+    outline: none;
+    font-size: 18px;
+}
+
+/*for smallest size*/
+@media (min-width: 280px) {
+    .container {
+        width: 250px;
+    }
+}
+
+/*smartphones, portrait iPhone, portrait 480x320 phones (Android)*/
+@media (min-width: 320px) {
+    .container {
+        width: 300px;
+    }
+}
+
+/*smartphones, Android phones, landscape iPhone*/
+@media (min-width: 480px) {
+    .container {
+        width: 460px;
+    }
+}
+
+/*portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android)*/
+@media (min-width: 600px) {
+    .container {
+        width: 350px;
+    }
+}
+
+/*tablet, landscape iPad, lo-res laptops ands desktops*/
+@media (min-width: 820px) {
+    .container {
+        width: 400px;
+    }
+}
+
+/*big landscape tablets, laptops, and desktops*/
+@media (min-width: 1025px) {
+    .container {
+        width: 400px;
+    }
+}
+
+@media (min-width: 1281px) {
+
+    /*hi-res laptops and desktops*/
+    .container {
+        width: 400px;
+    }
+}
