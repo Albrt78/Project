@@ -155,51 +155,21 @@ a:hover {
     font-size: 18px;
 }
 
-/*for smallest size*/
-@media (min-width: 280px) {
+/*smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (max-width: 300px) {
     .container {
-        width: 250px;
+        width: 250px; 
     }
 }
 
-/*smartphones, portrait iPhone, portrait 480x320 phones (Android)*/
-@media (min-width: 320px) {
+@media (min-width: 300px) and (max-width: 600px) {
     .container {
         width: 300px;
     }
 }
 
-/*smartphones, Android phones, landscape iPhone*/
-@media (min-width: 480px) {
-    .container {
-        width: 460px;
-    }
-}
 
-/*portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android)*/
 @media (min-width: 600px) {
-    .container {
-        width: 350px;
-    }
-}
-
-/*tablet, landscape iPad, lo-res laptops ands desktops*/
-@media (min-width: 820px) {
-    .container {
-        width: 400px;
-    }
-}
-
-/*big landscape tablets, laptops, and desktops*/
-@media (min-width: 1025px) {
-    .container {
-        width: 400px;
-    }
-}
-
-@media (min-width: 1281px) {
-
-    /*hi-res laptops and desktops*/
     .container {
         width: 400px;
     }
